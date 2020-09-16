@@ -38,7 +38,7 @@ echo '[INFO] Start to build Gitbook static files...'
 
 ls -al
 cp -rf $BOOK_DIR/* /gitbook/
-sh /root/custom-entrypoint.sh "gitbook init && gitbook install && gitbook build"
+sh /root/custom-entrypoint.sh "npm init --yes && npm install honkit --save-dev && npx honkit init && npx honkit build"
 checkIfErr
 ls -al /gitbook/_book
 checkIfErr
